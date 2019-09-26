@@ -160,7 +160,7 @@ class Application
     }
     $t = microtime(true) - $t0;
     verbosef("%d of %d IPs matched, %d of %d unmatched, %d ms, %d iterations/ms", $matchCount, count($ipList), count($ipList) - $matchCount, count($ipList), $t * 1000, count($ipList) / ($t * 1000));
-    file_put_contents('re.txt', $re);
+    file_put_contents($GLOBALS['argv'][2], $re);
   }
 }
 
